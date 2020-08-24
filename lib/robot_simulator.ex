@@ -1,18 +1,14 @@
 defmodule RobotSimulator do
-  @moduledoc """
-  Documentation for `RobotSimulator`.
-  """
 
-  @doc """
-  Hello world.
+  def create(direction \\ :north, position \\ {0, 0}) do
+    %{position: position, direction: direction}
+  end
 
-  ## Examples
+  def position(%{position: position} = _robot) do
+    position
+  end
 
-      iex> RobotSimulator.hello()
-      :world
-
-  """
-  def hello do
-    :world
+  def direction(%{direction: direction} = _robot) do
+    direction
   end
 end
